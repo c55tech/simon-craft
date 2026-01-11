@@ -1,0 +1,50 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    label: 'API URL'|t('simon'),
+    instructions: 'Base URL of the SIMON API server (e.g., http://localhost:3000)'|t('simon'),
+    id: 'apiUrl',
+    name: 'apiUrl',
+    value: settings.apiUrl,
+    required: false,
+    errors: settings.getErrors('apiUrl')
+}) }}
+
+{{ forms.textField({
+    label: 'Auth Key'|t('simon'),
+    instructions: 'Authentication key for SIMON API'|t('simon'),
+    id: 'authKey',
+    name: 'authKey',
+    value: settings.authKey,
+    required: false,
+    errors: settings.getErrors('authKey')
+}) }}
+
+{{ forms.textField({
+    label: 'Client ID'|t('simon'),
+    instructions: 'Your SIMON client ID'|t('simon'),
+    id: 'clientId',
+    name: 'clientId',
+    value: settings.clientId,
+    required: false,
+    errors: settings.getErrors('clientId')
+}) }}
+
+{{ forms.textField({
+    label: 'Site ID'|t('simon'),
+    instructions: 'Your SIMON site ID'|t('simon'),
+    id: 'siteId',
+    name: 'siteId',
+    value: settings.siteId,
+    required: false,
+    errors: settings.getErrors('siteId')
+}) }}
+
+{{ forms.lightswitchField({
+    label: 'Enable Automatic Submission'|t('simon'),
+    instructions: 'Enable automatic data submission via scheduled tasks'|t('simon'),
+    id: 'enableCron',
+    name: 'enableCron',
+    on: settings.enableCron,
+    errors: settings.getErrors('enableCron')
+}) }}

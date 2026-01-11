@@ -1,0 +1,43 @@
+{
+    "name": "simon/integration",
+    "description": "SIMON Integration plugin for Craft CMS",
+    "type": "craft-plugin",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "monitoring",
+        "simon"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SIMON Team",
+            "homepage": "https://simon.example.com"
+        }
+    ],
+    "support": {
+        "email": "support@simon.example.com",
+        "issues": "https://github.com/your-org/simon/issues",
+        "source": "https://github.com/your-org/simon",
+        "docs": "https://github.com/your-org/simon/blob/main/modules/simon-craft/README.md"
+    },
+    "require": {
+        "craftcms/cms": "^4.0.0|^5.0.0",
+        "php": ">=8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "simon\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "SIMON Integration",
+        "handle": "simon",
+        "developer": "SIMON Team",
+        "developerUrl": "https://simon.example.com",
+        "documentationUrl": "https://github.com/your-org/simon/blob/main/modules/simon-craft/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/your-org/simon/main/modules/simon-craft/CHANGELOG.md",
+        "class": "simon\\Plugin"
+    }
+}
