@@ -10,14 +10,27 @@ Craft CMS plugins **must** be installed via Composer. Craft will not discover pl
 
 #### Using GitHub Repository
 
-Add the repository to your `composer.json`:
+Add the repository using Composer commands:
+
+```bash
+# Add the repository
+composer config repositories.simon-craft vcs git@github.c55:c55tech/simon-craft.git
+
+# Install the plugin
+composer require simon/integration:dev-main
+
+# Install in Craft CMS
+./craft install/plugin simon
+```
+
+Alternatively, you can manually add the repository to your `composer.json`:
 
 ```json
 {
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/c55tech/simon-craft"
+      "url": "git@github.c55:c55tech/simon-craft.git"
     }
   ],
   "require": {
