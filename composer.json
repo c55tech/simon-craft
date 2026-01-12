@@ -18,9 +18,9 @@
     ],
     "support": {
         "email": "support@simon.example.com",
-        "issues": "https://github.com/your-org/simon/issues",
-        "source": "https://github.com/your-org/simon",
-        "docs": "https://github.com/your-org/simon/blob/main/modules/simon-craft/README.md"
+        "issues": "https://github.com/c55tech/simon-craft/issues",
+        "source": "https://github.com/c55tech/simon-craft",
+        "docs": "https://github.com/c55tech/simon-craft/blob/main/README.md"
     },
     "require": {
         "craftcms/cms": "^4.0.0|^5.0.0",
@@ -36,8 +36,8 @@
         "handle": "simon",
         "developer": "SIMON Team",
         "developerUrl": "https://simon.example.com",
-        "documentationUrl": "https://github.com/your-org/simon/blob/main/modules/simon-craft/README.md",
-        "changelogUrl": "https://raw.githubusercontent.com/your-org/simon/main/modules/simon-craft/CHANGELOG.md",
+        "documentationUrl": "https://github.com/c55tech/simon-craft/blob/main/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/c55tech/simon-craft/main/CHANGELOG.md",
         "class": "simon\\Plugin"
     }
 }
