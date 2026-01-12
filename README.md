@@ -8,6 +8,31 @@ Craft CMS plugin for integrating with the SIMON monitoring system.
 
 Craft CMS plugins **must** be installed via Composer. Craft will not discover plugins that are manually copied to the plugins directory.
 
+#### Using GitHub Repository
+
+Add the repository to your `composer.json`:
+
+```json
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/c55tech/simon-craft"
+    }
+  ],
+  "require": {
+    "simon/integration": "dev-main"
+  }
+}
+```
+
+Then install:
+
+```bash
+composer require simon/integration:dev-main
+./craft install/plugin simon
+```
+
 #### For Development (Path Repository)
 
 If developing the plugin locally:
