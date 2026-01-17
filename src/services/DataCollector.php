@@ -12,6 +12,8 @@ class DataCollector extends Component
     {
         $data = [];
 
+        $data['application_type'] = 'craft';
+
         // Core version
         $data['core'] = [
             'version' => Craft::$app->getVersion(),

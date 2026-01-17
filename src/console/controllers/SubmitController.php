@@ -31,15 +31,19 @@ class SubmitController extends Controller
 
         $siteData = $dataCollector->collect();
         $baseUrl = Craft::$app->getSites()->getCurrentSite()->getBaseUrl();
+        $siteName = Craft::$app->getSites()->getCurrentSite()->name;
 
-        $payload = [
+        $payload = array_merge([
             'client_id' => (int) $settings->clientId,
             'site_id' => (int) $settings->siteId,
-            'cms_type' => 'craft',
-            'site_name' => Craft::$app->getSites()->getCurrentSite()->name,
-            'site_url' => $baseUrl,
-            'data' => $siteData,
-        ];
+            'auth_key' => $settings->authKey,
+            'application_type' => 'craft',
+            'site' => [
+                'name' => $siteName,
+                'url' => $baseUrl,
+                'application_type' => 'craft',
+            ],
+        ], $siteData);
 
         $this->stdout("Submitting to SIMON API...\n");
 
